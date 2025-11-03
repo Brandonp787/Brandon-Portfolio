@@ -1,0 +1,39 @@
+body{
+    background-image: url("Mybackgroundimage.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+h1{
+	font-family: "consolas", sans-serif;
+}
+h4{
+	font-family: "consolas", sans-serif;
+	background-color: rgba(240, 248, 255, 0.486);
+	border-style: outset;
+	border-width: 5px;
+	border-color: goldenrod;
+	border-radius: 10px;
+	padding: 5px;
+}
+p{
+	font-family: "consolas", sans-serif;
+}
+img{
+	background-color: rgba(240, 248, 255, 0.486);
+	border-style: outset;
+	border-width: 5px;
+	border-color: goldenrod;
+	border-radius: 10px;
+	padding: 5px;
+}
+h3{
+	background-color: rgba(215, 240, 250, 0.541);
+	border-style: outset;
+	border-width:5px;
+	border-color: rgba(0, 132, 255, 0.432);
+	border-radius: 10px;
+	padding: 5px;
+	font-family: "consolas", sans-serif;
+}
