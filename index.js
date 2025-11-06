@@ -93,7 +93,7 @@ const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 
-function playGame(playerchoice){
+function playGame(playerChoice){
 
     const computerChoice = choices[Math.floor(Math.random() * 3)];
 
@@ -120,4 +120,41 @@ function playGame(playerchoice){
     playerDisplay.textContent = `PLAYER: ${playerChoice}`;
     computerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
+}
+// IMAGE SLIDER
+
+const slides = document.querySelectorAll(".slides img");
+let slideIndex = 0;
+let intervalId = null;
+
+//initializeSlider();
+document.addEventListener("DOMContentLoaded", initializeSlider)
+
+function initializeSlider(){
+
+    if(slides.length > 0){
+         slides[slideIndex].classList.add("displaySlide");
+         intervalId = setInterval(nextSlide, 5000);
+    }
+}
+function showSlide(index){
+
+    if(index >= slides.length){
+        slideIndex = 0;
+    }
+    else if(index < 0){
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach(slide => {
+        slide.classList.remove("displaySlide");
+    });
+    slides[slideIndex].classList.add("displaySlide");
+}
+function prevSlide(){
+
+}
+function nextSlide(){
+    slideIndex++;
+    showSlide(slideIndex);
 }
