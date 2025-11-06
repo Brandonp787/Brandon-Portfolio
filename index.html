@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <meta name="description" content="Brandon Perez — Web Developer & Game Designer Portfolio">
         <title>Brandon's Portfolio
         </title>
         <link rel="stylesheet" href="style.css">
@@ -13,12 +15,11 @@
       emailjs.init("aO2shQiB4CDzILjHZ");
    })();
 </script>
-<script src="script.js"></script>
     </head>
    <body>
     
-    <audio controls autoplay> 
-        <source src="good for the ghost - Alge.mp3">
+    <audio controls autoplay muted loop> 
+        <source src="good for the ghost - Alge.mp3" type="audio/mpeg">
         <source src="good for the ghost - Alge.wav">
     </audio>
     <p><big><b>Hello this is my website for displaying my skills of web building and other necessary projects!, stick around and enjoy learning more about me!</b></big></p>
@@ -35,6 +36,12 @@
         <li>Have learned both <b>Javascript</b> as well as <b>Python<ul><li><div id="myBox">Click me 😁<ul><li></li></ul></div></li></ul></b></li>
         <p><big><b>Use your arrow keys! Javascript example.</b></big></p>
         <h1><div id="myBox2"><big>👾</big></div></h1>
+
+           <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+           <button onclick="fetchData()">Fetch Pokemon</button><br>
+
+           <img src="" alt="Pokemon sprite" id="pokemonSprite" style="display: none">
+
         <h1>Car slider</h1>
 
         <div class="slider">
@@ -42,8 +49,8 @@
            <img class="slide" src="Lambo1.jpg" alt="Image #1">
            <img class="slide" src="Lambo2.jpg" alt="Image #2">
         </div>
-        <button class="prev" onclick="prevSlide()">&#10094</button>
-        <button class="next" onclick="nextSlide()">&#10095</button>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
     
         <h1>Rock - Paper - Scissors</h1>
@@ -66,7 +73,7 @@
     </p>
  <form>
     <h3>
-    <form action="action_page.php" method="post"></form>
+    <form action="action_page.php" method="post" onsubmit="sendMail(); return false;">
 
     <div class="form-group">
     <label for="name">Name:</label>
@@ -111,5 +118,6 @@
 </h3>
  </form>
  <script src="index.js"></script>
+ <script src="script.js"></script>
    </body>
 </html>
