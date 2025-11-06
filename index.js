@@ -1,7 +1,7 @@
 window.alert("welcome to my site!"); 
 function sendMail(){
     let parms = {
-        name : document.getElementById("name").Value,
+        name : document.getElementById("name").value,
         email : document.getElementById("email").value,
         subject : document.getElementById("subject").value,
         message : document.getElementById("message").value,
@@ -152,9 +152,35 @@ function showSlide(index){
     slides[slideIndex].classList.add("displaySlide");
 }
 function prevSlide(){
-
+    clearInterval(intervalId);
+    slideIndex--;
+    showSlide(slideIndex);
 }
 function nextSlide(){
     slideIndex++;
     showSlide(slideIndex);
+}
+fetchData();
+
+async function fetchData(){
+
+    try{
+
+        const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+
+        if(!response.ok){
+            throw new Error("not found in pokedex");
+        }
+
+        const data = await response.json();
+        const pokemonSprite = data.sprites.front_default;
+        const imgElement = document.getElementById("pokemonSprite");
+
+        imgElement.src = pokemonSprite;
+        imgElement.style.display = "block";
+    }
+    catch(error){
+        console.error(error);
+    }
 }
