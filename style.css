@@ -37,3 +37,63 @@ h3{
 	padding: 5px;
 	font-family: "consolas", sans-serif;
 }
+#myBox{
+	background-color: aqua;
+	width: 200px;
+	height: 200px;
+	font-size: 3.5rem;
+	font-weight: bold;
+	display: flex;
+	align-items:center;
+	text-align:center;
+	padding: 5px;
+	border-style: outset;
+	border-radius: 10px;
+	border-color:black;
+}
+body{
+	margin: 0;
+}
+#myBox2{
+	background-color:rgba(255, 255, 255, 0.479);
+	width: 200px;
+	height: 200px;
+	display:flex;
+	justify-content: center;
+	position: relative;
+
+}
+body{
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h1{
+	font-size: 3.5rem;
+	color: rgb(19, 18, 18)
+}
+.choices{
+	margin-bottom: 30px;
+}
+.choices button{
+	font-size: 5.5rem;
+	min-width: 160px;
+	margin: 0 10px;
+	border-radius: 250px;
+	background-color: rgb(0, 81, 255);
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+}
+.choices button:hover{
+	background-color:aquamarine
+}
+#playerDisplay, #computerDisplay{
+	font-size: 2.5rem;
+}
+#resultDisplay{
+	font-size: 5rem;
+	margin: 30px 0;
+}
